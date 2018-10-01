@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trabalho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    .cabeca{
+        height: 200px;
+        width: 100%;
+        background: linear-gradient(blueviolet, rgb(169, 102, 231));
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        animation-name: example;/*nome da animação*/
+        animation-duration: 2s;
+        animation-iteration-count: infinite; 
+    }
+    @keyframes example{ /*nome da animação*/
+        from{background: blueviolet}
+        to{background: linear-gradient(rgb(243, 200, 237), rgb(241, 9, 183))}
+    }
+
+    .cabeca h1{
+        padding: 30px;
+        font-size: 100px;
+        color: white;
+        animation-name: nome;/*nome da animação*/
+        animation-duration: 2s;
+        animation-iteration-count: infinite; 
+    }
+    @keyframes nome{ /*nome da animação*/
+        from{color: white}
+        to{color:slateblue}
+    }
+    main{
+        float: right;
+
+    }
+    .meio{
+        background-color: white;
+        width: 50%;
+        height: 500px;
+        text-align: justify;
+        /*padding: 10px;*/
+        float:left;
+    }
+    .esquerda{
+        background-color: blue;
+        width: 25%;
+        height: 500px;
+        float:right;
+        color: rgb(99, 102, 102);
+        box-shadow: 0px 2px 5px 0px;/*sombreamento*/
+        box-shadow: rgb(126, 125, 125);
+    }
+    .navegacao{
+        background-color: white;
+        width: 25%;
+        height: 500px;
+        float:left;
+    }
+    .navegacao ul li{
+        background-color: blue;
+        padding: 10px;
+        margin: 10px;
+        margin-left: -25px;
+        font-size: 30px;
+        list-style: none;/*some os pontinhos da lista*/
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .navegacao ul li a{
+        color: white;
+        text-decoration: none;/*some o subilinhado*/
+    }
+    p{
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 960px){
+        .meio{
+        width: 50%;
+        }
+        .esquerda{
+            width: 25%;
+
+        }
+        .navegacao{
+            width: 25%;
+        }
+
+    }
+    @media screen and (max-width: 479px){
+        .meio{
+        width: 100%;
+        }
+        .esquerda{
+            width: 100%;
+
+        }
+        .navegacao{
+            width: 100%;
+        }
+
+
+    }
+    #menu ul{
+        margin: 0;
+        background-color:rgb(174, 119, 226);/*cor do fundo*/
+        list-style: none;/*some os pontinhos da lista*/
+        box-shadow: 0px 2px 5px;/*sombreamento*/
+        box-shadow: rgb(182, 180, 180);
+
+    }
+    #menu ul li{
+        display: inline;/*texto alinhado para direita*/
+
+    }
+
+    #menu ul li a{
+        padding: 15px 15px;/*cresce o tamanho da linha -- espaçamento da linha*/
+        display: inline-block;/*funciona como um padding*/
+        font-size: 20px;
+
+        color: white;/*cor da fonte*/
+        text-decoration: none;/*some a linha de link*/
+
+    }
+    #menu ul li a:hover{
+        color:fuchsia; /*cor da letra ao passar o mouse*/
+        background-color: white;/*cor ao passar o mouse no quadrado*/
+    }
+    #menu ul{
+        padding: 0;/*deixa o submenu mais alinhado*/
+    }
+    #menu ul ul{
+        display: none;
+    }
+    #menu ul li:hover > ul{ /*aparecer o menu de baixo*/
+        display: block;
+
+
+    }
+
+
+</style>
+<body>
+    <header class="cabeca">
+        <h1>Meu Bloguinho</h1>
+    </header>
+    <nav id="menu" style="background-color: rgb(174, 119, 226);">
+            <ul>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">NOTICIAS</a></li>
+                <li><a href="#">ESTADOS</a></li>
+                <li><a href="#">EM DESTAQUE</a></li>
+                <li><a href="#">FALE CONOSCO</a>
+                <ul>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul></li>
+            </ul>
+        </nav>
+    <main>
+    <nav class="navegacao">
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">INICIO</a></li>
+        </ul>
+    </nav>
+        <div class="meio">
+                <h3 style="text-align: center; padding: 10px">Texto</h3>
+                <p>Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável. Wikipédia</p>
+        </div>
+        <div class="esquerda">
+            <p style="color: azure;">Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável. Wikipédia</p>
+        </div>
+    </main>
+    <footer>
+        <div style="background-color: teal; font-size: 40px; color: white; text-align: center;">
+            <p>Final do bloguinho</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
